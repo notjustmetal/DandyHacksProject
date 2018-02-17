@@ -15,6 +15,8 @@
 		326BADDC2038BC3A0048CF91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 326BADDA2038BC3A0048CF91 /* LaunchScreen.storyboard */; };
 		326BADE72038BC3A0048CF91 /* DandyHacksProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326BADE62038BC3A0048CF91 /* DandyHacksProjectTests.swift */; };
 		326BADF22038BC3A0048CF91 /* DandyHacksProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326BADF12038BC3A0048CF91 /* DandyHacksProjectUITests.swift */; };
+		326BAE002038CCA90048CF91 /* StoreScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326BADFF2038CCA90048CF91 /* StoreScreenCell.swift */; };
+		326BAE022038D3530048CF91 /* OrderStoresVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326BAE012038D3530048CF91 /* OrderStoresVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		326BADED2038BC3A0048CF91 /* DandyHacksProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DandyHacksProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		326BADF12038BC3A0048CF91 /* DandyHacksProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DandyHacksProjectUITests.swift; sourceTree = "<group>"; };
 		326BADF32038BC3A0048CF91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		326BADFF2038CCA90048CF91 /* StoreScreenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreScreenCell.swift; sourceTree = "<group>"; };
+		326BAE012038D3530048CF91 /* OrderStoresVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStoresVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 			children = (
 				326BADCE2038BC3A0048CF91 /* AppDelegate.swift */,
 				326BADD02038BC3A0048CF91 /* ViewController.swift */,
+				326BADFF2038CCA90048CF91 /* StoreScreenCell.swift */,
+				326BAE012038D3530048CF91 /* OrderStoresVC.swift */,
 				326BADD22038BC3A0048CF91 /* Main.storyboard */,
 				326BADD82038BC3A0048CF91 /* Assets.xcassets */,
 				326BADDA2038BC3A0048CF91 /* LaunchScreen.storyboard */,
@@ -262,7 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				326BAE022038D3530048CF91 /* OrderStoresVC.swift in Sources */,
 				326BADD72038BC3A0048CF91 /* DandyHacksProject.xcdatamodeld in Sources */,
+				326BAE002038CCA90048CF91 /* StoreScreenCell.swift in Sources */,
 				326BADD12038BC3A0048CF91 /* ViewController.swift in Sources */,
 				326BADCF2038BC3A0048CF91 /* AppDelegate.swift in Sources */,
 			);

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -84,6 +85,9 @@
                                 <state key="normal" title="Order">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="fGA-qG-vWh" kind="show" id="sTx-Y8-ZLe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEM-4F-Imc">
                                 <rect key="frame" x="121" y="342" width="133" height="41"/>
@@ -112,6 +116,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q6j-IW-NXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1799" y="134"/>
+        </scene>
+        <!--Order StoresVC-->
+        <scene sceneID="I2s-s3-slU">
+            <objects>
+                <tableViewController id="fGA-qG-vWh" customClass="OrderStoresVC" customModule="DandyHacksProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jt0-e4-ZE0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AvailStore" rowHeight="247" id="MDo-5i-QA1" customClass="StoreScreenCell" customModule="DandyHacksProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="247"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MDo-5i-QA1" id="eeh-cO-x8F">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="246.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TempStarLogo" translatesAutoresizingMaskIntoConstraints="NO" id="v65-nl-dB4">
+                                            <rect key="frame" x="24" y="19" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="PcG-ZA-fWd"/>
+                                                <constraint firstAttribute="width" constant="40" id="j9h-MM-B6s"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXU-rs-753">
+                                            <rect key="frame" x="72" y="31" width="279" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="OXU-rs-753" firstAttribute="leading" secondItem="v65-nl-dB4" secondAttribute="trailing" constant="8" id="56s-d5-R0w"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="OXU-rs-753" secondAttribute="trailing" constant="8" id="MKR-aj-tTH"/>
+                                        <constraint firstItem="v65-nl-dB4" firstAttribute="top" secondItem="eeh-cO-x8F" secondAttribute="topMargin" constant="8" id="mby-iU-GMs"/>
+                                        <constraint firstItem="v65-nl-dB4" firstAttribute="leading" secondItem="eeh-cO-x8F" secondAttribute="leadingMargin" constant="8" id="w8n-si-yxB"/>
+                                        <constraint firstItem="OXU-rs-753" firstAttribute="top" secondItem="eeh-cO-x8F" secondAttribute="topMargin" constant="20" id="zl0-DO-iTO"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="storeImage" destination="v65-nl-dB4" id="Hf4-Ry-EBg"/>
+                                    <outlet property="storeName" destination="OXU-rs-753" id="7k5-Jb-zxN"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fGA-qG-vWh" id="69J-ot-STu"/>
+                            <outlet property="delegate" destination="fGA-qG-vWh" id="Wio-DY-GLT"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HXd-cl-z16" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2573.5999999999999" y="-244.22788605697153"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="EMx-Aw-hCH">
@@ -192,4 +250,7 @@
             <point key="canvasLocation" x="-191" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="TempStarLogo" width="720" height="712"/>
+    </resources>
 </document>
