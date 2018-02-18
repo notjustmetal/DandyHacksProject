@@ -20,6 +20,8 @@
 		326BAE042038E06E0048CF91 /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326BAE032038E06E0048CF91 /* MenuItemCell.swift */; };
 		326BAE082038E25C0048CF91 /* MenuItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326BAE072038E25C0048CF91 /* MenuItemVC.swift */; };
 		326BAE0A2038E5010048CF91 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326BAE092038E5010048CF91 /* MenuItem.swift */; };
+		326BAE0C20394EBA0048CF91 /* PickTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326BAE0B20394EBA0048CF91 /* PickTypeVC.swift */; };
+		326BAE0E203960050048CF91 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326BAE0D203960050048CF91 /* Store.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		326BAE032038E06E0048CF91 /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
 		326BAE072038E25C0048CF91 /* MenuItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemVC.swift; sourceTree = "<group>"; };
 		326BAE092038E5010048CF91 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		326BAE0B20394EBA0048CF91 /* PickTypeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickTypeVC.swift; sourceTree = "<group>"; };
+		326BAE0D203960050048CF91 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,7 @@
 				326BAE052038E0890048CF91 /* ViewControllers */,
 				326BAE062038E0B10048CF91 /* TableViewCells */,
 				326BADCE2038BC3A0048CF91 /* AppDelegate.swift */,
+				326BAE0D203960050048CF91 /* Store.swift */,
 				326BAE092038E5010048CF91 /* MenuItem.swift */,
 				326BADD22038BC3A0048CF91 /* Main.storyboard */,
 				326BADD82038BC3A0048CF91 /* Assets.xcassets */,
@@ -146,6 +151,7 @@
 				326BADD02038BC3A0048CF91 /* ViewController.swift */,
 				326BAE012038D3530048CF91 /* OrderStoresVC.swift */,
 				326BAE072038E25C0048CF91 /* MenuItemVC.swift */,
+				326BAE0B20394EBA0048CF91 /* PickTypeVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -298,8 +304,10 @@
 				326BAE002038CCA90048CF91 /* StoreScreenCell.swift in Sources */,
 				326BAE042038E06E0048CF91 /* MenuItemCell.swift in Sources */,
 				326BAE082038E25C0048CF91 /* MenuItemVC.swift in Sources */,
+				326BAE0E203960050048CF91 /* Store.swift in Sources */,
 				326BAE0A2038E5010048CF91 /* MenuItem.swift in Sources */,
 				326BADD12038BC3A0048CF91 /* ViewController.swift in Sources */,
+				326BAE0C20394EBA0048CF91 /* PickTypeVC.swift in Sources */,
 				326BADCF2038BC3A0048CF91 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

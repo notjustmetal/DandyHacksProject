@@ -11,10 +11,12 @@ import Foundation
 class MenuItem: NSObject {
     var item: String
     var price: Double
+    var isSize: Bool
 
-    init(_ item: String, _ price: Double) {
+    init(_ item: String, _ price: Double, _ isSize: Bool) {
         self.item = item
         self.price = price
+        self.isSize = isSize
     }
 }
 

@@ -64,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="476" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Pick TypeVC-->
         <scene sceneID="UpM-Lf-2tJ">
             <objects>
-                <viewController id="JJ7-08-ecF" sceneMemberID="viewController">
+                <viewController id="JJ7-08-ecF" customClass="PickTypeVC" customModule="DandyHacksProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qcO-8b-UPJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,7 +86,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="fGA-qG-vWh" kind="show" id="sTx-Y8-ZLe"/>
+                                    <segue destination="oDx-TD-Yq4" kind="show" id="sTx-Y8-ZLe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEM-4F-Imc">
@@ -96,6 +96,9 @@
                                 <state key="normal" title="Deliver">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="testButton:" destination="JJ7-08-ecF" eventType="touchUpInside" id="hL3-3l-ia3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.88235294119999996" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -117,7 +120,52 @@
             </objects>
             <point key="canvasLocation" x="1799" y="134"/>
         </scene>
-        <!--Order StoresVC-->
+        <!--Profile-->
+        <scene sceneID="D7O-2z-rgd">
+            <objects>
+                <viewController id="3KG-G0-M7b" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NQR-Cj-cew">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Last" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBd-al-y7t">
+                                <rect key="frame" x="8" y="144" width="359" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UiQ-Cv-9qW">
+                                <rect key="frame" x="120" y="181" width="65.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wzm-r6-VUM">
+                                <rect key="frame" x="193" y="181" width="60" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.88235294119999996" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zBd-al-y7t" firstAttribute="leading" secondItem="i34-6a-3bc" secondAttribute="leading" constant="8" id="9W2-yq-nCX"/>
+                            <constraint firstItem="UiQ-Cv-9qW" firstAttribute="leading" secondItem="i34-6a-3bc" secondAttribute="leading" constant="120" id="C2P-0b-xaW"/>
+                            <constraint firstItem="Wzm-r6-VUM" firstAttribute="top" secondItem="zBd-al-y7t" secondAttribute="bottom" constant="8" id="WPg-th-ktc"/>
+                            <constraint firstItem="zBd-al-y7t" firstAttribute="top" secondItem="i34-6a-3bc" secondAttribute="top" constant="80" id="cwb-sY-JNO"/>
+                            <constraint firstItem="Wzm-r6-VUM" firstAttribute="leading" secondItem="UiQ-Cv-9qW" secondAttribute="trailing" constant="8" id="jHp-6U-f2o"/>
+                            <constraint firstItem="i34-6a-3bc" firstAttribute="trailing" secondItem="zBd-al-y7t" secondAttribute="trailing" constant="8" id="q4X-RJ-FzW"/>
+                            <constraint firstItem="UiQ-Cv-9qW" firstAttribute="top" secondItem="zBd-al-y7t" secondAttribute="bottom" constant="8" id="t1H-fi-OCK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="i34-6a-3bc"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" id="fya-63-K0U"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="obO-Ef-NzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2574" y="-904"/>
+        </scene>
+        <!--Order-->
         <scene sceneID="I2s-s3-slU">
             <objects>
                 <tableViewController id="fGA-qG-vWh" customClass="OrderStoresVC" customModule="DandyHacksProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -158,7 +206,7 @@
                                 <connections>
                                     <outlet property="storeImage" destination="v65-nl-dB4" id="Hf4-Ry-EBg"/>
                                     <outlet property="storeName" destination="OXU-rs-753" id="7k5-Jb-zxN"/>
-                                    <segue destination="Vvr-jc-nj5" kind="show" id="94W-0n-olY"/>
+                                    <segue destination="Vvr-jc-nj5" kind="show" identifier="storeSelected" id="94W-0n-olY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -167,10 +215,11 @@
                             <outlet property="delegate" destination="fGA-qG-vWh" id="Wio-DY-GLT"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Order" id="efe-jk-ffY"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HXd-cl-z16" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2573.5999999999999" y="-244.22788605697153"/>
+            <point key="canvasLocation" x="3250" y="-245"/>
         </scene>
         <!--Menu ItemVC-->
         <scene sceneID="GpV-Ke-gKr">
@@ -223,7 +272,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Noz-md-2oQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3279.1999999999998" y="-241.52923538230885"/>
+            <point key="canvasLocation" x="3924" y="-245"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="EMx-Aw-hCH">
@@ -302,6 +351,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sEC-C5-mcr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-191" y="134"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="N7r-d9-nyi">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="oDx-TD-Yq4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="W9g-uF-caC">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="fGA-qG-vWh" kind="relationship" relationship="viewControllers" id="qw0-nc-2nk"/>
+                        <segue destination="3KG-G0-M7b" kind="relationship" relationship="viewControllers" id="TjM-zm-B0m"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bcl-fk-giI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2574" y="-245"/>
         </scene>
     </scenes>
     <resources>

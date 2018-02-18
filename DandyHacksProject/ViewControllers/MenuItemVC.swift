@@ -9,18 +9,21 @@ import UIKit
 import Foundation
 
 class MenuItemVC: UITableViewController {
-    var menuItems: [String] = ["Coffee", "Tea", "Latte"]
+    var menuItems: [MenuItem] = []
+    var storeName: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 60
+        self.navigationItem.title = storeName
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(
             withIdentifier: "MenuItemCell", for: indexPath) as! MenuItemCell
         let item = menuItems[indexPath.row]
-        cell.menuItem?.text = item
+        cell.menuItem?.text = item.item
+        cell.menuPrice?.text = "$ " + String(item.price)
         return cell
     }
     
