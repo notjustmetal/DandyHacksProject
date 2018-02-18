@@ -92,6 +92,18 @@ class OrderStoresVC: UITableViewController {
 //        let store = availStores[indexPath.row]
         let store = openStores[indexPath.row]
         cell.storeName?.text = store.name
+        if (indexPath.row == 0) {
+            cell.storeImage?.image = #imageLiteral(resourceName: "starLogo")
+        }
+        if (indexPath.row == 1) {
+            cell.storeImage?.image = #imageLiteral(resourceName: "peetLogo")
+        }
+        if (indexPath.row == 2) {
+            cell.storeImage?.image = #imageLiteral(resourceName: "lateLogo")
+        }
+        if (indexPath.row == 3) {
+            cell.storeImage?.image = #imageLiteral(resourceName: "javaLogo")
+        }
         return cell
     }
     

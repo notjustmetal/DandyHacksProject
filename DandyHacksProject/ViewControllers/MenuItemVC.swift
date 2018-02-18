@@ -11,6 +11,7 @@ import Foundation
 class MenuItemVC: UITableViewController {
     var menuItems: [MenuItem] = []
     var storeName: String = ""
+    var checkoutItems: [MenuItem] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,5 +41,29 @@ class MenuItemVC: UITableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
+    }
+    
+    @IBAction func checkout(_ sender: Any) {
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as? UITableViewCell {
+            let index = tableView.indexPath(for: cell)!.row
+            if segue.identifier == "itemSelected" {
+                let newViewController = segue.destination as! AddItemVC
+                newViewController.origItem = menuItems[index].item
+                newViewController.origPrice = menuItems[index].price
+            }
+        }
+        
+        if segue.identifier == "checkoutSegue" {
+            let newViewController = segue.destination as! CheckoutVC
+            newViewController.checkoutItems = checkoutItems
+            newViewController.checkoutItems.append(MenuItem("Delivery Fee: ", 1.99, true))
+            for i in 0..<newViewController.checkoutItems.count {
+                newViewController.total = newViewController.total + newViewController.checkoutItems[i].price
+            }
+            newViewController.checkoutItems.append(MenuItem("Total: ", newViewController.total, true))
+        }
     }
 }
