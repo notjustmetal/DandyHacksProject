@@ -126,11 +126,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AvailStore" rowHeight="247" id="MDo-5i-QA1" customClass="StoreScreenCell" customModule="DandyHacksProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="247"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AvailStore" rowHeight="93" id="MDo-5i-QA1" customClass="StoreScreenCell" customModule="DandyHacksProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="93"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MDo-5i-QA1" id="eeh-cO-x8F">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="246.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="92.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TempStarLogo" translatesAutoresizingMaskIntoConstraints="NO" id="v65-nl-dB4">
@@ -158,6 +158,7 @@
                                 <connections>
                                     <outlet property="storeImage" destination="v65-nl-dB4" id="Hf4-Ry-EBg"/>
                                     <outlet property="storeName" destination="OXU-rs-753" id="7k5-Jb-zxN"/>
+                                    <segue destination="Vvr-jc-nj5" kind="show" id="94W-0n-olY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -170,6 +171,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HXd-cl-z16" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2573.5999999999999" y="-244.22788605697153"/>
+        </scene>
+        <!--Menu ItemVC-->
+        <scene sceneID="GpV-Ke-gKr">
+            <objects>
+                <tableViewController id="Vvr-jc-nj5" customClass="MenuItemVC" customModule="DandyHacksProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RPb-hv-mlp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuItemCell" rowHeight="65" id="J8Z-9G-0b8" customClass="MenuItemCell" customModule="DandyHacksProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="65"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J8Z-9G-0b8" id="ieF-ak-ieU">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Menu Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ym-Sg-haI">
+                                            <rect key="frame" x="24" y="19" width="228" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5j-8h-XT0">
+                                            <rect key="frame" x="312" y="19" width="39" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="k5j-8h-XT0" firstAttribute="top" secondItem="ieF-ak-ieU" secondAttribute="topMargin" constant="8" id="0Gh-mC-kJR"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="k5j-8h-XT0" secondAttribute="trailing" constant="8" id="TuT-Ip-Tgy"/>
+                                        <constraint firstItem="9Ym-Sg-haI" firstAttribute="top" secondItem="ieF-ak-ieU" secondAttribute="topMargin" constant="8" id="VCC-aT-qrc"/>
+                                        <constraint firstItem="k5j-8h-XT0" firstAttribute="leading" secondItem="9Ym-Sg-haI" secondAttribute="trailing" constant="60" id="iDf-7F-kZy"/>
+                                        <constraint firstItem="9Ym-Sg-haI" firstAttribute="leading" secondItem="ieF-ak-ieU" secondAttribute="leadingMargin" constant="8" id="qXe-ud-JD1"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="menuItem" destination="9Ym-Sg-haI" id="Av2-Dj-aQZ"/>
+                                    <outlet property="menuPrice" destination="k5j-8h-XT0" id="0yr-bu-4TV"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Vvr-jc-nj5" id="Tr1-qg-vO9"/>
+                            <outlet property="delegate" destination="Vvr-jc-nj5" id="XKg-VA-FbJ"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Noz-md-2oQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3279.1999999999998" y="-241.52923538230885"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="EMx-Aw-hCH">
@@ -189,13 +243,13 @@
                                 <rect key="frame" x="16" y="261.5" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BTs-W6-Sn9">
                                 <rect key="frame" x="16" y="331.5" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFB-OM-npO">
                                 <rect key="frame" x="121" y="411.5" width="133" height="41"/>
