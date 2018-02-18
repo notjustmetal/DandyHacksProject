@@ -12,11 +12,15 @@ class MenuItemVC: UITableViewController {
     var menuItems: [MenuItem] = []
     var storeName: String = ""
     var checkoutItems: [MenuItem] = []
+    @IBOutlet var checkoutButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 60
         self.navigationItem.title = storeName
+        if (checkoutItems.count == 0) {
+            checkoutButton.isHidden = true;
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

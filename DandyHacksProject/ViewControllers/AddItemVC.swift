@@ -13,6 +13,7 @@ class AddItemVC: UIViewController {
     
     @IBOutlet var item: UILabel!
     @IBOutlet var price: UILabel!
+    @IBOutlet var addButton: UIButton!
     
     var origItem: String!
     var origPrice: Double!
@@ -21,6 +22,8 @@ class AddItemVC: UIViewController {
         super.viewWillAppear(animated)
         item.text = origItem
         price.text = "$ " + String(origPrice)
+        addButton.layer.cornerRadius = 20
+        addButton.clipsToBounds = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -32,6 +35,7 @@ class AddItemVC: UIViewController {
     @IBAction func addItem(_ sender: Any) {
         let vc = self.navigationController?.viewControllers[4] as! MenuItemVC
         vc.checkoutItems.append(MenuItem(origItem, origPrice, true))
+        vc.checkoutButton.isHidden = false
        
         self.navigationController?.popViewController(animated: true)
     }
